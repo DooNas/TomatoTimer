@@ -2,7 +2,6 @@ package test;
 
 public class tset {
     public static void main(String[] args) {
-        System.out.println("연결 테스트");
-        System.out.println("테스트 2");
+        System.out.println("모든 테스트 끝");
     }
 }
