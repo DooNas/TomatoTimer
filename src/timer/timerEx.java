@@ -21,11 +21,17 @@ public class timerEx extends JFrame{
         JLabel timerLabel = new JLabel();
         timerLabel.setFont(new Font("Gothci", Font.ITALIC, 80)); //폰트 설정
         c.add(timerLabel);//컨테이너 안에 추가
+        //글상자 구현
+        JLabel ResttimerLabel = new JLabel();
+        ResttimerLabel.setFont(new Font("Gothci", Font.ITALIC, 80)); //폰트 설정
+        c.add(ResttimerLabel);//컨테이너 안에 추가
 
-        Worktimer wkt = new Worktimer(timerLabel);  //worktimer 선언
         setSize(300, 250);
         setVisible(true);
+        Worktimer wkt = new Worktimer(timerLabel);  //worktimer 선언
         wkt.start();//타이머 스레드 run()실행
+        Resttimer rtt = new Resttimer(ResttimerLabel);  //worktimer 선언
+        rtt.start();//타이머 스레드 run()실행
     }
 
     public static void main(String[] args) {
