@@ -22,24 +22,13 @@ public class timerEx extends JFrame{
         timerLabel.setFont(new Font("Gothci", Font.ITALIC, 80)); //폰트 설정
         c.add(timerLabel);//컨테이너 안에 추가
 
-        //버튼 구현
-        JButton button = new JButton("Start");
-        button.addActionListener(new EventHandler());
-        c.add(button);
-
+        Worktimer wkt = new Worktimer(timerLabel);  //worktimer 선언
         setSize(300, 250);
         setVisible(true);
+        wkt.start();//타이머 스레드 run()실행
     }
 
     public static void main(String[] args) {
         new timerEx();
-    }
-}
-class EventHandler implements ActionListener{
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == button){
-
-        }
     }
 }
