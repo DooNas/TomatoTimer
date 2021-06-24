@@ -19,8 +19,6 @@ public class Worktimer extends Thread{
         int CheckSeconds = 0;   //분
         String StCheckSeconds = "";
 
-        timerLabel.setText("");
-
         while(CountTime != 0){
             CheckMinutes = CountTime / 60;
             if(CheckMinutes<10){ StCheckMinutes = "0" + CheckMinutes;
@@ -30,7 +28,7 @@ public class Worktimer extends Thread{
             if(CheckSeconds<10){ StCheckSeconds = "0" + CheckSeconds;
             }else{ StCheckSeconds = Integer.toString(CheckSeconds); }
 
-            timerLabel.setText(StCheckMinutes + ":" + StCheckSeconds);
+            timerLabel.setText(StCheckMinutes + " : " + StCheckSeconds);
             CountTime--;
             try{
                 Thread.sleep(1000); //1초
