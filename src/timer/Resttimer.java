@@ -27,7 +27,7 @@ public class Resttimer extends Thread{
             if(CheckSecondsRest<10){ StCheckSecondsRest = "0" + CheckSecondsRest;
             }else{ StCheckSecondsRest = Integer.toString(CheckSecondsRest); }
 
-            ResttimerLabel.setText(StCheckMinutesRest + " : " + StCheckSecondsRest);
+            ResttimerLabel.setText(StCheckMinutesRest + ":" + StCheckSecondsRest);
 
             RestCountTime--;
             try{

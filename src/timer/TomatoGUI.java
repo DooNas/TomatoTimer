@@ -1,4 +1,6 @@
-package gui;
+package timer;
+
+import test.timer;
 
 import java.awt.EventQueue;
 
@@ -9,6 +11,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.SwingConstants;
 
 public class TomatoGUI extends JFrame {
@@ -62,6 +66,15 @@ public class TomatoGUI extends JFrame {
 		JButton playBtn25 = new JButton("\uC7AC\uC0DD");
 		playBtn25.setBounds(25, 149, 97, 23);
 		contentPane.add(playBtn25);	//패널에 추가
+		//타이머 상호작용
+		playBtn25.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Worktimer worktimer = new Worktimer(Time25);
+				worktimer.start();
+			}
+		});
 
 		//버튼 선언(25분 리셋)
 		JButton resetBtn25 = new JButton("\uB9AC\uC14B");
@@ -72,6 +85,15 @@ public class TomatoGUI extends JFrame {
 		JButton playBtn5 = new JButton("\uC7AC\uC0DD");
 		playBtn5.setBounds(296, 149, 97, 23);
 		contentPane.add(playBtn5);	//패널에 추가
+		//타이머 상호작용
+		playBtn5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Resttimer resttimer = new Resttimer(Time5);
+				resttimer.start();
+			}
+		});
 
 		//버튼 선언(5분 리셋)
 		JButton resetBtn5 = new JButton("\uB9AC\uC14B");
