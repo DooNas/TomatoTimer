@@ -28,7 +28,7 @@ public class Worktimer extends Thread{
             if(CheckSeconds<10){ StCheckSeconds = "0" + CheckSeconds;
             }else{ StCheckSeconds = Integer.toString(CheckSeconds); }
 
-            timerLabel.setText(StCheckMinutes + " : " + StCheckSeconds);
+            timerLabel.setText(StCheckMinutes + ":" + StCheckSeconds);
             CountTime--;
             try{
                 Thread.sleep(1000); //1초
