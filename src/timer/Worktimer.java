@@ -10,7 +10,7 @@ public class Worktimer extends Thread{
     }
 
 
-    public void run(){  //jvm에서 스레드 자동 실행
+    public void set(){  //jvm에서 스레드 자동 실행
         int CountTime = 1500;   //25분
 
         int CheckMinutes = 0;     //시간
@@ -29,7 +29,6 @@ public class Worktimer extends Thread{
             }else{ StCheckSeconds = Integer.toString(CheckSeconds); }
 
             timerLabel.setText(StCheckMinutes + " : " + StCheckSeconds);
-
             CountTime--;
             try{
                 Thread.sleep(1000); //1초
@@ -37,4 +36,3 @@ public class Worktimer extends Thread{
         }
     }
 }
-
