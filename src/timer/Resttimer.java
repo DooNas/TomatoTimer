@@ -19,15 +19,15 @@ public class Resttimer extends Thread{
 
 
         while(RestCountTime != 0){
-            CheckMinutesRest = RestCountTime/60;
+            CheckMinutesRest = RestCountTime / 60;
             if(CheckMinutesRest<10){ StCheckMinutesRest = "0" + CheckMinutesRest;
             }else{ StCheckMinutesRest = Integer.toString(CheckMinutesRest); }
 
-            CheckSecondsRest = RestCountTime%60;
+            CheckSecondsRest = RestCountTime % 60;
             if(CheckSecondsRest<10){ StCheckSecondsRest = "0" + CheckSecondsRest;
             }else{ StCheckSecondsRest = Integer.toString(CheckSecondsRest); }
 
-            ResttimerLabel.setText(StCheckMinutesRest + " : " + StCheckSecondsRest);
+            ResttimerLabel.setText(StCheckMinutesRest + ":" + StCheckSecondsRest);
 
             RestCountTime--;
             try{
