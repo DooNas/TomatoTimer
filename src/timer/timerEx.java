@@ -42,5 +42,6 @@ public class timerEx extends JFrame{
 
     public static void main(String[] args) {
         new timerEx();  //창이 열리면서 시간순으로 진행하여 타이머 시작
+
     }
 }
