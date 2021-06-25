@@ -40,5 +40,6 @@ public class Worktimer extends Thread{
         timerLabel.setText("00:00");
         PlayAlarm mp3 = new PlayAlarm(filename);
         mp3.play();
+        timerLabel.setText("25:00");
     }
 }

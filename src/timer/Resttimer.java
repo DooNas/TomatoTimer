@@ -40,5 +40,6 @@ public class Resttimer extends Thread{
         ResttimerLabel.setText("00:00");
         PlayAlarm mp3 = new PlayAlarm(filename);
         mp3.play();
+        ResttimerLabel.setText("05:00");
     }
 }
