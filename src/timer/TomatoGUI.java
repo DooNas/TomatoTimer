@@ -77,6 +77,13 @@ public class TomatoGUI extends JFrame {
 		//Button(For 25minutes Reset)
 		JButton resetBtn25 = new JButton("\uB9AC\uC14B");
 		resetBtn25.setBounds(134, 149, 97, 23);
+		resetBtn25.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Time25.setText("25:00");
+			}
+		});
 		contentPane.add(resetBtn25);	//Add into JPanel
 
 		//Buttion(For 5minutes Start)
@@ -96,6 +103,13 @@ public class TomatoGUI extends JFrame {
 		//Button(For 5minutes Reset)
 		JButton resetBtn5 = new JButton("\uB9AC\uC14B");
 		resetBtn5.setBounds(406, 149, 97, 23);
+		resetBtn5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Time5.setText("05:00");
+			}
+		});
 		contentPane.add(resetBtn5);	//Add into JPanel
 
 		//Button(For Check Sucess)

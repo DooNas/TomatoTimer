@@ -1,10 +1,11 @@
 package timer;
 
-import java.awt.*;
 import javax.swing.*;
 
 public class Worktimer extends Thread{
+
     private JLabel timerLabel;
+
     public Worktimer(JLabel timerLabel){
         this.timerLabel = timerLabel;
     }
@@ -13,11 +14,13 @@ public class Worktimer extends Thread{
     public void run(){  //jvm에서 스레드 자동 실행
         int CountTime = 1500;   //25분
 
-        int CheckMinutes = 0;     //시간
+        int CheckMinutes = 0;     //Minutes
         String StCheckMinutes = "";
 
-        int CheckSeconds = 0;   //분
+        int CheckSeconds = 0;   //Seconds
         String StCheckSeconds = "";
+
+        String filename = "D:\\ForCapStone\\TomatoTimer\\Aram.mp3";    //
 
         while(CountTime != 0){
             CheckMinutes = CountTime / 60;
@@ -34,5 +37,8 @@ public class Worktimer extends Thread{
                 Thread.sleep(1000); //1초
             }catch(InterruptedException e){return;}
         }
+        timerLabel.setText("00:00");
+        PlayAlarm mp3 = new PlayAlarm(filename);
+        mp3.play();
     }
 }
