@@ -15,7 +15,7 @@ public class Resttimer extends Thread{
 
 
     public void run(){  //jvm에서 스레드 자동 실행
-        int Time = 10;   //5분
+        int Time = 300;   //5
 
         int CheckMinutesRest = 0;     //Minutes
         String StCheckMinutesRest = "";

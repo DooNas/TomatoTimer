@@ -14,7 +14,7 @@ public class Worktimer extends Thread{
 
 
     public void run(){  //jvm에서 스레드 자동 실행
-        int CountTime = 10;   //25분
+        int CountTime = 1500;   //25
 
         int CheckMinutes = 0;     //Minutes
         String StCheckMinutes = "";
