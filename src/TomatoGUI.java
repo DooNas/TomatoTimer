@@ -9,9 +9,15 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TomatoGUI extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -69,6 +75,16 @@ public class TomatoGUI extends JFrame {
 		contentPane.add(resetBtn5);
 		
 		JButton sucBtn = new JButton("\uC131\uACF5\uD588\uB294\uAC00?");
+		sucBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Count = 00;
+				Count++;
+				
+				sucCtn1.setText(Count);
+				
+			
+			}
+		});
 		sucBtn.setFont(new Font("±¼¸²", Font.BOLD, 27));
 		sucBtn.setBounds(24, 213, 207, 87);
 		contentPane.add(sucBtn);
@@ -96,3 +112,4 @@ public class TomatoGUI extends JFrame {
 		contentPane.add(sucCtn2);
 	}
 }
+
