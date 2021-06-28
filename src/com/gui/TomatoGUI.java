@@ -1,7 +1,7 @@
 package com.gui;
 
-import com.timer.Resttimer;
-import com.timer.Worktimer;
+import com.timer.Rest05;
+import com.timer.Work25;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -53,13 +53,13 @@ public class TomatoGUI extends JFrame {
 		playBtn5.setBounds(296, 149, 199, 23);
 		playBtn5.setEnabled(false);
 		contentPane.add(playBtn5);	//Add into JPanel
-
 		//Interaction(For 25minutes)
 		playBtn25.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				new Worktimer(Time25, playBtn5).start();
+				//new Worktimer(Time25, playBtn5).start();
+				new Work25(Time25, playBtn5).start();
 				playBtn25.setEnabled(false);
 			}
 		});
@@ -68,7 +68,8 @@ public class TomatoGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				new Resttimer(Time5, playBtn25).start();
+				//new Resttimer(Time5, playBtn25).start();
+				new Rest05(Time5, playBtn25).start();
 				playBtn5.setEnabled(false);
 			}
 		});
