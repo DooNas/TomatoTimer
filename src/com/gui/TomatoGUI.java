@@ -1,6 +1,7 @@
-package timer;
+package com.gui;
 
-import java.awt.EventQueue;
+import com.timer.Resttimer;
+import com.timer.Worktimer;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -45,55 +46,32 @@ public class TomatoGUI extends JFrame {
 
 		//Button(For 25minutes Start)
 		JButton playBtn25 = new JButton("\uC7AC\uC0DD");
-		playBtn25.setBounds(25, 149, 97, 23);
-		//Interaction
+		playBtn25.setBounds(25, 149, 199, 23);
+		contentPane.add(playBtn25);	//Add into JPanel
+
+		JButton playBtn5 = new JButton("\uC7AC\uC0DD");
+		playBtn5.setBounds(296, 149, 199, 23);
+		playBtn5.setEnabled(false);
+		contentPane.add(playBtn5);	//Add into JPanel
+
+		//Interaction(For 25minutes)
 		playBtn25.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				Worktimer worktimer = new Worktimer(Time25);
-				worktimer.start();
+				new Worktimer(Time25, playBtn5).start();
+				playBtn25.setEnabled(false);
 			}
 		});
-		contentPane.add(playBtn25);	//Add into JPanel
-
-		//Button(For 25minutes Reset)
-		JButton resetBtn25 = new JButton("\uB9AC\uC14B");
-		resetBtn25.setBounds(134, 149, 97, 23);
-		resetBtn25.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				Time25.setText("25:00");
-			}
-		});
-		contentPane.add(resetBtn25);	//Add into JPanel
-
-		//Buttion(For 5minutes Start)
-		JButton playBtn5 = new JButton("\uC7AC\uC0DD");
-		playBtn5.setBounds(296, 149, 97, 23);
-		//Interaction
+		//Interaction(For 5minutes)
 		playBtn5.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				Resttimer resttimer = new Resttimer(Time5);
-				resttimer.start();
+				new Resttimer(Time5, playBtn25).start();
+				playBtn5.setEnabled(false);
 			}
 		});
-		contentPane.add(playBtn5);	//Add into JPanel
-
-		//Button(For 5minutes Reset)
-		JButton resetBtn5 = new JButton("\uB9AC\uC14B");
-		resetBtn5.setBounds(406, 149, 97, 23);
-		resetBtn5.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				Time5.setText("05:00");
-			}
-		});
-		contentPane.add(resetBtn5);	//Add into JPanel
 
 		//Button(For Check Sucess)
 		JButton sucBtn = new JButton("\uC131\uACF5\uD588\uB294\uAC00?");

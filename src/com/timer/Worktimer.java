@@ -1,18 +1,20 @@
-package timer;
+package com.timer;
 
 import javax.swing.*;
 
 public class Worktimer extends Thread{
 
     private JLabel timerLabel;
+    private JButton button;
 
-    public Worktimer(JLabel timerLabel){
+    public Worktimer(JLabel timerLabel, JButton button){
         this.timerLabel = timerLabel;
+        this.button = button;
     }
 
 
     public void run(){  //jvm에서 스레드 자동 실행
-        int CountTime = 1500;   //25분
+        int CountTime = 10;   //25분
 
         int CheckMinutes = 0;     //Minutes
         String StCheckMinutes = "";
@@ -41,5 +43,6 @@ public class Worktimer extends Thread{
         PlayAlarm mp3 = new PlayAlarm(filename);
         mp3.play();
         timerLabel.setText("25:00");
+        button.setEnabled(true);
     }
 }

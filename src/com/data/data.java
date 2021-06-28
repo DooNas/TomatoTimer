@@ -1,4 +1,4 @@
-package data;
+package com.data;
 
 public class data {
 }
