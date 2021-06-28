@@ -80,8 +80,6 @@ public class TomatoGUI extends JFrame {
 				int Count = 00;
 				Count++;
 				
-				sucCtn1.setText(Count);
-				
 			
 			}
 		});
