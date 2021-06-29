@@ -5,7 +5,7 @@ import java.text.*;
 import java.util.*;
 
 public class Counting extends Thread{
-    private String filepath = "D:\\ProjectWfilecontroll\\file\\";
+    private String filepath = "D:\\ForCapStone\\check\\main\\Checkfile\\";
 
     private String Count(String StCount){ //숫자처리
         int Count = Integer.parseInt(StCount);
@@ -19,7 +19,7 @@ public class Counting extends Thread{
         return result;
     }
 
-    private String toDate() { //날짜 설정
+    private String toDate() { //Today파일명
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
         return dateFormat.format(date).toString()+".txt";
