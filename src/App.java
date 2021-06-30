@@ -12,6 +12,7 @@ public class App {
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
+                    return;
                 }
             }
         });
