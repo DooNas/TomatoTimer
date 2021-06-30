@@ -1,5 +1,6 @@
 package com.gui;
 
+import com.counts.*;
 import com.timer.Rest05;
 import com.timer.Work25;
 
@@ -20,6 +21,7 @@ public class TomatoGUI extends JFrame {
 		//Set
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 543, 360);
+		setResizable(false);
 		
 		//JPanel
 		contentPane = new JPanel();
@@ -80,13 +82,16 @@ public class TomatoGUI extends JFrame {
 		contentPane.add(tdaySucctn);	//Add into JPanel
 
 		//TextBox(For Check yesterday SucessCounts)
-		JLabel sucCtn1 = new JLabel("00");
+		CountLastday lastday = new CountLastday();
+		JLabel sucCtn1 = new JLabel(lastday.CheckCounts());
 		sucCtn1.setHorizontalAlignment(SwingConstants.CENTER);
 		sucCtn1.setFont(new Font("Gulim", Font.BOLD, 19));
 		sucCtn1.setBounds(406, 219, 64, 27);
 		contentPane.add(sucCtn1);	//Add into JPanel
+
 		//TextBox(For Check today SucessCounts)
-		JLabel sucCtn2 = new JLabel("00");
+		CountToday today = new CountToday();
+		JLabel sucCtn2 = new JLabel(today.CheckCounts());
 		sucCtn2.setHorizontalAlignment(SwingConstants.CENTER);
 		sucCtn2.setFont(new Font("Gulim", Font.BOLD, 19));
 		sucCtn2.setBounds(406, 253, 64, 27);
@@ -103,7 +108,8 @@ public class TomatoGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				sucCtn2.setText("01");
+				today.AddCounts();
+				sucCtn2.setText(today.CheckCounts());
 			}
 		});
 	}
