@@ -12,7 +12,18 @@ import java.awt.event.*;
 public class TomatoGUI extends JFrame {
 
 	private JPanel contentPane;
-
+	public void ShowMain(){
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					TomatoGUI frame = new TomatoGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the frame.
